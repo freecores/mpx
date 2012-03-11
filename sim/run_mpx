@@ -1,0 +1,4 @@
+rm ./obj_dir/*
+verilator  --cc mpx_top.v main.cpp mpx_top.cpp -I../mpx -I../soc +define+CONF_MPX_TARGET_SIM+ --exe $2
+make -j -f Vmpx_top.mk -C ./obj_dir/
+./obj_dir/Vmpx_top $1
