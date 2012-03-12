@@ -44,13 +44,13 @@
 // Return: x << y
 //-----------------------------------------------------------------
 function [31:0] shift_left;
-	input  [31:0] x;
-	input  [31:0] y;
-	reg [31:0] shift1l;
-	reg [31:0] shift2l;
-	reg [31:0] shift4l;
-	reg [31:0] shift8l;
-	reg [31:0] shift16l;
+    input  [31:0] x;
+    input  [31:0] y;
+    reg [31:0] shift1l;
+    reg [31:0] shift2l;
+    reg [31:0] shift4l;
+    reg [31:0] shift8l;
+    reg [31:0] shift16l;
 begin 
     if (y[0] == 1'b1)
         shift1l = {x[30:0],1'b0};
@@ -80,7 +80,7 @@ begin
     shift_left = shift16l;
 end
 endfunction
-    
+
 //-----------------------------------------------------------------
 // shift_right: Shift right by specified amount
 // Inputs: x = input, y = shift amount
@@ -264,9 +264,9 @@ function [0:0] less_than_equal_zero;
     input  [31:0] x;
 begin 
     if ((x == 32'h00000000) | (x[31] == 1'b1)) 
-            less_than_equal_zero = 1'b1;
+        less_than_equal_zero = 1'b1;
     else 
-            less_than_equal_zero = 1'b0;
+        less_than_equal_zero = 1'b0;
 end
 endfunction
     
@@ -279,9 +279,9 @@ function [0:0] more_than_equal_zero;
     input  [31:0] x;
 begin 
     if ((x == 32'h00000000) | (x[31] == 1'b0)) 
-            more_than_equal_zero = 1'b1;
+        more_than_equal_zero = 1'b1;
     else 
-            more_than_equal_zero = 1'b0;
+        more_than_equal_zero = 1'b0;
 end
 endfunction
     
@@ -294,8 +294,8 @@ function [0:0] more_than_zero;
     input  [31:0] x;
 begin 
     if (((x != 32'h00000000) & (x[31] == 1'b0))) 
-		more_than_zero = 1'b1;
+        more_than_zero = 1'b1;
     else 
-		more_than_zero = 1'b0;
+        more_than_zero = 1'b0;
 end
 endfunction

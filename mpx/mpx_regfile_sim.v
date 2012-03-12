@@ -48,31 +48,31 @@
 //-----------------------------------------------------------------
 module mpx_regfile_sim 
 ( 
-	clk_i, 
-	rst_i, 
-	en_i, 
-	wr_i, 
-	rs_i, 
-	rt_i, 
-	rd_i, 
-	reg_rs_o, 
-	reg_rt_o, 
-	reg_rd_i 
+    clk_i, 
+    rst_i, 
+    en_i, 
+    wr_i, 
+    rs_i, 
+    rt_i, 
+    rd_i, 
+    reg_rs_o, 
+    reg_rt_o, 
+    reg_rd_i 
 );
 
 //-----------------------------------------------------------------
 // I/O
 //-----------------------------------------------------------------
-input			clk_i				/*verilator public*/;
-input			rst_i				/*verilator public*/;
-input			en_i				/*verilator public*/;
-input			wr_i				/*verilator public*/;
-input [4:0]		rs_i				/*verilator public*/;
-input [4:0]		rt_i				/*verilator public*/;
-input [4:0]		rd_i				/*verilator public*/;
-output [31:0]	reg_rs_o			/*verilator public*/;
-output [31:0]	reg_rt_o			/*verilator public*/;
-input [31:0]	reg_rd_i			/*verilator public*/;
+input           clk_i               /*verilator public*/;
+input           rst_i               /*verilator public*/;
+input           en_i                /*verilator public*/;
+input           wr_i                /*verilator public*/;
+input [4:0]     rs_i                /*verilator public*/;
+input [4:0]     rt_i                /*verilator public*/;
+input [4:0]     rd_i                /*verilator public*/;
+output [31:0]   reg_rs_o            /*verilator public*/;
+output [31:0]   reg_rt_o            /*verilator public*/;
+input [31:0]    reg_rd_i            /*verilator public*/;
 
 //-----------------------------------------------------------------
 // Registers
@@ -120,37 +120,37 @@ always @ (posedge clk_i or posedge rst_i)
 begin 
    if (rst_i) 
    begin 
-	    reg_r1_at <= 32'h00000000;
-		reg_r2_v0 <= 32'h00000000;
-		reg_r3_v1 <= 32'h00000000;
-		reg_r4_a0 <= 32'h00000000;
-		reg_r5_a1 <= 32'h00000000;
-		reg_r6_a2 <= 32'h00000000;
-		reg_r7_a3 <= 32'h00000000;
-		reg_r8 <= 32'h00000000;
-		reg_r9 <= 32'h00000000;
-		reg_r10 <= 32'h00000000;
-		reg_r11 <= 32'h00000000;
-		reg_r12 <= 32'h00000000;
-		reg_r13 <= 32'h00000000;
-		reg_r14 <= 32'h00000000;
-		reg_r15 <= 32'h00000000;
-		reg_r16 <= 32'h00000000;
-		reg_r17 <= 32'h00000000;
-		reg_r18 <= 32'h00000000;
-		reg_r19 <= 32'h00000000;
-		reg_r20 <= 32'h00000000;
-		reg_r21 <= 32'h00000000;
-		reg_r22 <= 32'h00000000;
-		reg_r23 <= 32'h00000000;
-		reg_r24 <= 32'h00000000;
-		reg_r25 <= 32'h00000000;
-		reg_k0 <= 32'h00000000;
-		reg_k1 <= 32'h00000000;
-		reg_gp <= 32'h00000000;
-		reg_sp <= 32'h00000000;
-		reg_fp <= 32'h00000000;
-		reg_ra <= 32'h00000000;
+        reg_r1_at <= 32'h00000000;
+        reg_r2_v0 <= 32'h00000000;
+        reg_r3_v1 <= 32'h00000000;
+        reg_r4_a0 <= 32'h00000000;
+        reg_r5_a1 <= 32'h00000000;
+        reg_r6_a2 <= 32'h00000000;
+        reg_r7_a3 <= 32'h00000000;
+        reg_r8 <= 32'h00000000;
+        reg_r9 <= 32'h00000000;
+        reg_r10 <= 32'h00000000;
+        reg_r11 <= 32'h00000000;
+        reg_r12 <= 32'h00000000;
+        reg_r13 <= 32'h00000000;
+        reg_r14 <= 32'h00000000;
+        reg_r15 <= 32'h00000000;
+        reg_r16 <= 32'h00000000;
+        reg_r17 <= 32'h00000000;
+        reg_r18 <= 32'h00000000;
+        reg_r19 <= 32'h00000000;
+        reg_r20 <= 32'h00000000;
+        reg_r21 <= 32'h00000000;
+        reg_r22 <= 32'h00000000;
+        reg_r23 <= 32'h00000000;
+        reg_r24 <= 32'h00000000;
+        reg_r25 <= 32'h00000000;
+        reg_k0 <= 32'h00000000;
+        reg_k1 <= 32'h00000000;
+        reg_gp <= 32'h00000000;
+        reg_sp <= 32'h00000000;
+        reg_fp <= 32'h00000000;
+        reg_ra <= 32'h00000000;
    end
    else if (en_i == 1'b1)
    begin 

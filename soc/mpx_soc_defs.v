@@ -41,30 +41,30 @@
 //-----------------------------------------------------------------
 // Memory Map
 //-----------------------------------------------------------------
-`define MEM_REGION_INTERNAL		3'b001
-`define MEM_REGION_CORE_IO		3'b010
-`define MEM_REGION_EXT_IO		3'b011
+`define MEM_REGION_INTERNAL     3'b001
+`define MEM_REGION_CORE_IO      3'b010
+`define MEM_REGION_EXT_IO       3'b011
 
 //-----------------------------------------------------------------
 // I/O
 //-----------------------------------------------------------------
 
 // General
-`define CORE_ID				8'h00
+`define CORE_ID                 8'h00
 
 // Basic Peripherals
-`define UART_USR			8'h04
-`define UART_UDR			8'h08
-`define TIMER_VAL			8'h10
-`define IRQ_MASK_SET		8'h14
-`define IRQ_MASK_STATUS		8'h14
-`define IRQ_MASK_CLR		8'h18
-`define IRQ_STATUS			8'h1C
-	`define IRQ_SYSTICK			(0)
-	`define IRQ_UART_RX_AVAIL   (1)
-	`define IRQ_SW			    (2)
-	`define IRQ_PIT				(6)
-	`define IRQ_EXT_FIRST		(8)
-	
-`define SYS_CLK_COUNT		8'h60
+`define UART_USR                8'h04
+`define UART_UDR                8'h08
+`define TIMER_VAL               8'h10
+`define IRQ_MASK_SET            8'h14
+`define IRQ_MASK_STATUS         8'h14
+`define IRQ_MASK_CLR            8'h18
+`define IRQ_STATUS              8'h1C
+    `define IRQ_SYSTICK             (0)
+    `define IRQ_UART_RX_AVAIL       (1)
+    `define IRQ_SW                  (2)
+    `define IRQ_PIT                 (6)
+    `define IRQ_EXT_FIRST           (8)
+    
+`define SYS_CLK_COUNT           8'h60
 
