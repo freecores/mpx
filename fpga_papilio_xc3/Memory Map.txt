@@ -1,0 +1,13 @@
+
+Memory Map
+----------
+
+The XC3S250E has around 24KB of BlockRAM which has been instantiated as 'BootRAM'.
+This memory is pre-initialised with a bootloader image which can be used to load new code via the serial port using X-Modem file transfer protocol.
+
+Map:
+0x0000 - 0x2000		= Bootloader
+0x2000 - 0x6000		= Application space
+
+
+The bootloader section 0x0000 - 0x2000 (8KBytes) can be re-used for BSS & Data sections for the application (thus overwriting the bootloader post boot).

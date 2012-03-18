@@ -57,6 +57,9 @@
 //-----------------------------------------------------------------
 // Defines
 //-----------------------------------------------------------------
+// Memory start offset (set to 0x2000 to match FPGA version where 
+// bootloader exists in first 8K)
+#define MEMORY_START        0x2000
 #define MEMORY_SIZE			(512 * 1024)
 
 //-----------------------------------------------------------------
@@ -110,8 +113,10 @@ int mpx_test_init(void)
 //-----------------------------------------------------------------
 int mpx_test_load(unsigned int addr, unsigned char val)
 {
-	if (addr >= MEMORY_SIZE)
+	if (addr >= (MEMORY_SIZE - MEMORY_START))
 		return -1;
+
+    addr += MEMORY_START;
 
 	switch (addr & 0x3)
 	{

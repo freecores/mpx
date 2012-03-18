@@ -9,7 +9,7 @@ Requirements:
 To run applications:
 ./run_mpx image.bin
 
-Where image.bin is your compiled source which has a starting address of 0x10000000.
+Where image.bin is your compiled source which has a starting address of 0x00002000.
 
 Example Image:
 ./run_mpx test_image.bin
@@ -29,4 +29,5 @@ Test:
 10. SYSCALL return PC check
 11. Comparision
 Correct comparision
-Total test clock cycles: 1679037
+Total test clock cycles: 1180442
+DONE!

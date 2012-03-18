@@ -41,7 +41,7 @@
 //-----------------------------------------------------------------
 // Memory Map
 //-----------------------------------------------------------------
-`define MEM_REGION_INTERNAL     3'b001
+`define MEM_REGION_INTERNAL     3'b000
 `define MEM_REGION_CORE_IO      3'b010
 `define MEM_REGION_EXT_IO       3'b011
 
